@@ -1,0 +1,7 @@
+{
+  "name": "avatar-gamer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
