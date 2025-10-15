@@ -1,0 +1,23 @@
+<div class="cruceta-container">
+  <div class="cruceta-row">
+    <ion-button fill="outline" shape="round" size="large" (click)="sendCommand('forward')">
+      ▲
+    </ion-button>
+  </div>
+  <div class="cruceta-row">
+    <ion-button fill="outline" shape="round" size="large" (click)="sendCommand('left')">
+      ◀
+    </ion-button>
+    <ion-button fill="outline" color="danger" shape="round" size="large" (click)="sendCommand('stop')">
+      ■
+    </ion-button>
+    <ion-button fill="outline" shape="round" size="large" (click)="sendCommand('right')">
+      ▶
+    </ion-button>
+  </div>
+  <div class="cruceta-row">
+    <ion-button fill="outline" shape="round" size="large" (click)="sendCommand('backward')">
+      ▼
+    </ion-button>
+  </div>
+</div>

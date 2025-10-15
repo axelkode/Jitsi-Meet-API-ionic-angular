@@ -1,0 +1,47 @@
+<div class="webrtc-container">
+  <!-- Video local -->
+  <div class="local-video-section">
+    <video #localVideo class="local-video" autoplay muted playsinline></video>
+    <div class="local-video-label">{{ userName }}</div>
+  </div>
+
+  <!-- Videos remotos -->
+  <div class="remote-videos-section">
+    <div #remoteVideosContainer class="remote-videos-grid">
+      <!-- Los videos remotos se agregan dinámicamente aquí -->
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <div class="controls-section">
+    <div class="controls-row">
+      <button 
+        class="control-btn video-btn" 
+        (click)="toggleVideo()"
+        [class.active]="isVideoEnabled">
+        <ion-icon name="videocam" *ngIf="isVideoEnabled"></ion-icon>
+        <ion-icon name="videocam-off" *ngIf="!isVideoEnabled"></ion-icon>
+      </button>
+      
+      <button 
+        class="control-btn audio-btn" 
+        (click)="toggleAudio()"
+        [class.active]="isAudioEnabled">
+        <ion-icon name="mic" *ngIf="isAudioEnabled"></ion-icon>
+        <ion-icon name="mic-off" *ngIf="!isAudioEnabled"></ion-icon>
+      </button>
+      
+      <button 
+        class="control-btn end-btn" 
+        (click)="endCall()">
+        <ion-icon name="call"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  <!-- Estado de conexión -->
+  <div class="connection-status" *ngIf="isConnected">
+    <ion-icon name="wifi"></ion-icon>
+    <span>Conectado a la sala: {{ roomId }}</span>
+  </div>
+</div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JitsiCallComponent } from './jitsi/jitsi-call/jitsi-call.component';
@@ -12,7 +12,8 @@ import { JitsiCallComponent } from './jitsi/jitsi-call/jitsi-call.component';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule // <-- Import the standalone component here
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

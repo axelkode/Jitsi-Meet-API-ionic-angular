@@ -8,6 +8,8 @@ import { Tab1Page } from './tab1.page';
 
 // 👇 IMPORTA el componente standalone (ajusta la ruta si es distinta)
 import { JitsiCallComponent } from '../jitsi/jitsi-call/jitsi-call.component';
+import { WebRTCCallComponent } from '../webrtc/webrtc-call/webrtc-call.component';
+import { RobotControlsComponent } from '../robot-controls/robot-controls.component';
 
 @NgModule({
   imports: [
@@ -15,8 +17,9 @@ import { JitsiCallComponent } from '../jitsi/jitsi-call/jitsi-call.component';
     FormsModule,
     IonicModule,
     Tab1PageRoutingModule,
-    // 👇 Aquí VA en imports por ser standalone
-    JitsiCallComponent
+    JitsiCallComponent,
+    WebRTCCallComponent,
+    RobotControlsComponent
   ],
   declarations: [
     Tab1Page
