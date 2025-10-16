@@ -1,0 +1,20 @@
+{
+  "name": "avatar-gamer-signaling-server",
+  "version": "1.0.0",
+  "description": "Servidor de signaling WebRTC para Avatar Gamer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": ["webrtc", "signaling", "socket.io", "avatar-gamer"],
+  "author": "Avatar Gamer",
+  "license": "MIT"
+}
